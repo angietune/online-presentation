@@ -1,0 +1,319 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>RSSchool, 2021, Q1</h1>
+					<p>REACT JS Basics</p>
+					<aside class="notes">
+						React is the most popular front-end JavaScript library in the field of web development. It is used by large, established companies and newly-minted startups alike (Netflix, Airbnb, Instagram, and the New York Times, to name a few). React brings many advantages to the table, making it a better choice than other frameworks like Angular.js.
+					</aside>
+				</section>
+				<section>
+					<h3>Main topics</h3>
+					<ul>
+						<li>What is React?</li>
+						<li>Why React?</li>
+						<li>Features of React</li>
+						<li>React Pre-requisities</li>
+						<li>Industry Trends</li>
+					</ul>
+					<aside class="notes">
+						This presentation will give you an introduction to all of React’s fundamentals. We’ll be covering the following topics:
+					</aside>
+				</section>
+				<section>
+					<h2>What is React?</h2>
+				</section>
+				<section>
+					<img width="200px" display="flex" src="./images/marketing-strategy.svg" alt="">
+					<br>
+					React is a JavaScript library created for building fast and interactive user interfaces for web and mobile applications.
+					<aside class="notes">
+						React is a JavaScript library created for building fast and interactive user interfaces for web and mobile applications.
+					</aside>
+				</section>
+				<section>
+					<img width="200px" display="flex" src="./images/osi_reversing_logotype_color_to_white_1.png" alt="">
+					<br>
+					It is an open-source, component-based, front-end library responsible only for the application’s view layer.
+					<aside class="notes">
+						It is an open-source, component-based, front-end library responsible only for the application’s view layer.
+					</aside>
+				</section>
+				<section>
+					<img width="200px" display="flex" src="./images/mvc.svg" alt="">
+					<br>
+					In Model View Controller (MVC) architecture, the view layer is responsible for how the app looks and feels. 
+					<aside class="notes">
+						In Model View Controller (MVC) architecture, the view layer is responsible for how the app looks and feels. 
+					</aside>
+				</section>
+				<section>
+					
+						<img width="800px" src="./images/insta.png" alt="">
+						
+								
+					<aside class="notes">
+						Let’s take a look at an Instagram webpage example, entirely built using React, to get a better understanding of how React works.
+						As the illustration shows, React divides the UI into multiple components, which makes the code easier to debug. This way, each component has its property and function.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Why is React?</h2>
+				</section>
+
+				<section>
+					<h3>Why React?</h3>
+					<section>
+						1. Easy creation of dynamic applications: React makes it easier to create dynamic web applications because it requires less coding and offers more functionality, as opposed to JavaScript, where coding often gets complex very quickly.
+					</section>
+					<section>
+						2. Improved performance: React uses Virtual DOM, thereby creating web applications faster. Virtual DOM compares the components’ previous states and updates only the items in the Real DOM that were changed, instead of updating all of the components again, as conventional web applications do. 
+					</section>
+					<section>
+						3. Reusable components: Components are the building blocks of any React application, and a single app usually consists of multiple components. These components have their logic and controls, and they can be reused throughout the application, which in turn dramatically reduces the application’s development time.
+					</section>
+					<section>
+						4. Unidirectional data flow: React follows a unidirectional data flow. This means that when designing a React app, developers often nest child components within parent components. Since the data flows in a single direction, it becomes easier to debug errors and know where a problem occurs in an application at the moment in question.
+					</section>
+					<section>
+						5. Small learning curve: React is easy to learn, as it mostly combines basic HTML and JavaScript concepts with some beneficial additions. Still, as is the case with other tools and frameworks, you have to spend some time to get a proper understanding of React’s library.
+					</section>
+					<section>
+						6. It can be used for the development of both web and mobile apps: We already know that React is used for the development of web applications, but that’s not all it can do. There is a framework called React Native, derived from React itself, that is hugely popular and is used for creating beautiful mobile applications. So, in reality, React can be used for making both web and mobile applications.
+					</section>
+					<section>
+						7. Dedicated tools for easy debugging: Facebook has released a Chrome extension that can be used to debug React applications. This makes the process of debugging React web applications faster and easier.
+					</section>
+					<aside class="notes">
+						React’s popularity today has eclipsed that of all other front-end development frameworks. Here is why:
+					</aside>
+				</section>
+				<section>
+					<h3>Features of React</h3> <br>
+					<img width="500px" src="./images/feat.png" alt="">
+				</section>
+				<section>
+					<h3>JSX - JavaScript Syntax Extension</h3>
+					<br>
+					<pre><code>
+					const name = 'angietune';
+					const greet = <h1>Hello, {name}</h1>;
+					</code></pre>
+					
+					<aside class="notes">
+						JSX is a syntax extension to JavaScript. It is used with React to describe what the user interface should look like. By using JSX, we can write HTML structures in the same file that contains JavaScript code. This makes the code easier to understand and debug, as it avoids the usage of complex JavaScript DOM structures.
+						The above code shows how JSX is implemented in React. It is neither a string nor HTML. Instead, it embeds HTML into JavaScript code.
+					</aside>
+
+				</section>
+				<section>
+					<h3>Virtual DOM</h3>
+					<br>
+					<section>
+						<p>What is the Document Object Model (DOM)?</p>
+					<img width="600px" src="./images/dom.JPG" alt="">
+					<aside class="notes">
+						React keeps a lightweight representation of the “real” DOM in the memory, and that is known as the “virtual” DOM (VDOM). Manipulating real DOM is much slower than manipulating VDOM because nothing gets drawn on the screen. When the state of an object changes, VDOM changes only that object in the real DOM instead of updating all of the objects. 
+						It may all seem a bit overwhelming for now, so let’s first understand what DOM is, and then we’ll go through how VDOM and real DOM interact with each other.
+					</aside>
+					</section>
+					
+					<section>
+						<h3></h3>How do Virtual DOM and React DOM interact with each other?</h3> <br>
+						<img width="400px" src="./images/domm.png" alt="">
+						<aside class="notes">
+							When the state of an object changes in a React application, VDOM gets updated. It then compares its previous state and then updates only those objects in the real DOM instead of updating all of the objects. This makes things move fast, especially when compared to other front-end technologies that have to update each object even if only a single object changes in the web application.
+						</aside>
+					</section>
+
+				</section>
+				<section>
+					<h3>Performance</h3>
+					<img width="700px" src="./images/performance.png" alt="">
+					<aside class="notes">
+						React uses VDOM, which makes the web applications run much faster than those developed with alternate front-end frameworks. React breaks a complex user interface into individual components, allowing multiple users to work on each component simultaneously, thereby speeding up the development time. 
+					</aside>
+				</section>
+				<section>
+					<h3>Extensions</h3>
+					<img width="300px" src="./images/flux.png" alt="">
+					<img width="300px" src="./images/redux.png" alt="">
+					<aside class="notes">
+						React goes beyond simple UI design and has many extensions that offer complete application architecture support. It provides server-side rendering, which entails rendering a normally client-side only web application on the server, and then sends a fully rendered page to the client. It also employs Flux and Redux extensively in web application development. Finally, there is React Native, a popular framework derived from React, used to create cross-compatible mobile applications 
+					</aside>
+				</section>
+				<section>
+					<h3>One-way Data Binding</h3>
+					<img src="./images/oneway.png" alt="">
+					<aside class="notes">
+						React’s one-way data binding keeps everything modular and fast. A unidirectional data flow means that when a developer designs a React app, they often nest child components within parent components. This way, a developer knows where and when an error occurs, giving them better control of the whole web application 
+					</aside>
+				</section>
+				<section>
+					<h3>Debugging</h3>
+					<img width="600px" src="./images/react-extension.JPG" alt="">
+					<aside class="notes">
+						React applications are easy to test due to a large developer community. Facebook even provides a small browser extension that makes React debugging faster and easier. 
+					</aside>
+					<section>
+						React Extension
+						<aside class="notes">
+							This extension, for example, adds a React tab in the developer tools option within the Chrome web browser. The tab makes it easy to inspect React components directly. 
+						</aside>
+					</section>
+				</section>
+				<section>
+					<h3>Components, State, and Props
+					</h3>
+					<aside class="notes">
+						Now, let’s take a look at React’s important concepts 
+					</aside>
+				</section>
+				<section>
+					<h3>Components</h3>
+					<img src="./images/components.png" alt="">
+				</section>
+				<section>
+					<h3>Components</h3>
+					<aside class="notes">
+						Components are the building blocks of any React application, and a single app usually consists of multiple components. A component is essentially a piece of the user interface. React splits the UI into independent, reusable parts that can be processed separately.
+						There are two types of components in React:
+					</aside>
+					<section>
+						Functional Components: 
+						<pre><code>
+						function Greeting(props) {
+						return <h1>Welcome to {props.name}</h1>;
+						}
+						</code></pre>
+						<aside class="notes">
+							These components have no state of their own and only contain a render method, so they are also called stateless components. They may derive data from other components as props (properties).
+						</aside>
+					</section>
+					<section>
+						Class Components: 
+						<pre><code>
+						class Greeting extends React.Component {
+						  render() {
+						    return <h1>Welcome to {this.props.name}</h1>;
+						  }
+						}</code></pre>
+						<aside class="notes">
+							These components can hold and manage their state and have a separate render method for returning JSX on the screen. They are also called stateful components, as they can have a state.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<h3>State</h3>
+					<pre><code>
+						class Greetings extends React.Component {
+							  state = {
+							    name: "World"
+							  };
+							  updateName() {
+							    this.setState({ name: "Simplilearn" });
+							  }
+							  render() {
+							      return(
+							          <div>
+							              {this.state.name}
+							          </div>
+							      )
+							  }
+							}
+					</code></pre>
+					<aside class="notes">
+						The state is a built-in React object that is used to contain data or information about the component. A component’s state can change over time; whenever it changes, the component re-renders. The change in state can happen as a response to user action or system-generated events, and these changes determine the behavior of the component and how it will render.  
+					</aside>
+				</section>
+				<section>
+					<h3>Props</h3>
+					<ul>
+						<li>Passing props to other components: carProp, bikeProp <br>
+							<img src="./images/passing-props.JPG" alt="">
+						</li>
+						<li>Accessing props passed to a component: this.prop.carProp, this.props.bikeProp <br>
+							<img width="400px" src="./images/import-react.JPG" alt="">
+						</li>
+					</ul>
+					<aside class="notes">
+						Props are short for properties. It is a React built-in object which stores the value of a tag’s attributes and works similar to the HTML attributes. It provides a way to pass data from one component to other components in the same way as arguments are passed in a function.  
+					</aside>
+					<aside class="notes">
+						In summary, components, state, and props are React’s fundamental concepts. Before you start working on React, there are a few concepts that which you should already be familiar with. We discuss the prerequisites below.
+					</aside>
+				</section>
+					
+				<section>
+					<h2>ReactJS Prerequisites</h2>
+					<ul>
+						<li>Programming concepts like functions, objects, arrays, and to a lesser extent, classes</li>
+						<li>Basic knowledge of JavaScript</li>
+						<li>Some familiarity with HTML</li>
+					</ul>
+					<aside class="notes">
+						Here are some of the concepts that you should be familiar with, to one degree or another:
+					</aside>
+				</section>
+				<section>
+					<h3>Industry Trends</h3>
+					<section>
+						<p>
+							React developers earn more money in comparison to other web development technologies. Due to the fast rendering of React applications, more and more companies are adopting this development tool, and this has subsequently led to a higher demand for React developers all around the world.
+						</p>
+					</section>
+					<section>
+						<img width="400px" src="./images/google-trends.JPG" alt="">
+						<p>
+							React has been consistently gaining popularity since it was released, and, as the following Google trends chart shows, there’s no sign of it slowing down. Facebook keeps adding features to React, making it increasingly more potent over time. It is safe to assume that React is here to stay.
+						</p>
+					</section>
+				
+					<aside class="notes">
+						“React” has become the latest buzzword in the front-end development community, reflecting its steadily increasing use among developers.
+					</aside>
+				</section>
+				<section>
+					Thank You!
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				parallaxBackgroundImage: './images/bg.jpg',
+				parallaxBackgroundSize: '3905px 1142px', 
+				parallaxBackgroundHorizontal: 200,
+  				parallaxBackgroundVertical: 50,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
